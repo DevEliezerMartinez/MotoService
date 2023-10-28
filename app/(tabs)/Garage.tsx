@@ -5,7 +5,7 @@ import { commonStyles } from "../../assets/commonStyles"; // Asegúrate de que l
 import { loadFonts } from "../../assets/fonts/Fonts"; // Importa la función de carga de fuentes
 import { useEffect } from "react";
 
-export default function TabTwoScreen() {
+export default function Trip() {
   useEffect(() => {
     // Carga las fuentes al inicio del componente
     loadFonts();
@@ -19,10 +19,9 @@ export default function TabTwoScreen() {
         darkColor="rgba(255,255,255,0.1)"
       />
 
-      <Text style={commonStyles.fontStyle1}>Texto pestaña 2o</Text>
+      <Text style={commonStyles.fontStyle1}>Textoo Garage</Text>
       <Text style={commonStyles.fontStyle2}>Textoo</Text>
-      <Text style={commonStyles.fontStyle3}>Textoo</Text>
-      <Text style={commonStyles.fontStyle4}>Textoo</Text>
+
 
       <VStack space="2xl">
         <HStack space="md">

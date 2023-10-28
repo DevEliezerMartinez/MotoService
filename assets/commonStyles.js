@@ -25,7 +25,7 @@ export const commonStyles = StyleSheet.create({
     fontFamily: 'PoppinsBold',
   },
   fontStyle4: {
-    fontSize: 20,
+    fontSize: 16,
     fontFamily: 'PoppinsLight'
   },
 });
