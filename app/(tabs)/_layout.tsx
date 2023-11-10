@@ -48,11 +48,12 @@ export default function TabLayout() {
         },
       }}
     >
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="Trips"
+        
         options={{
-          title: "Mis viajes",
-          headerShown: false,
+          title: "Mis viajese",
+          headerShown: true,
           tabBarLabelStyle: {
             fontFamily: "MontserratSemibold", // Usa el nombre definido en Font.loadAsync
             fontSize: 13,
@@ -64,7 +65,7 @@ export default function TabLayout() {
             />
           ),
         }}
-      />
+      /> */}
       <Tabs.Screen
         name="Garage"
         options={{
@@ -95,6 +96,24 @@ export default function TabLayout() {
             <Image
               source={require("../../assets/images/tool-02.png")}
               style={{ width: 30, height: 30, tintColor: "#FFFFFF" }}
+            />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="trips"
+        options={{
+          title: "Mis viajes",
+          headerShown: false,
+          tabBarLabelStyle: {
+            fontFamily: "MontserratSemibold", // Usa el nombre definido en Font.loadAsync
+            fontSize: 13,
+          },
+          tabBarIcon: () => (
+            <Image
+              source={require("../../assets/images/road-64.png")}
+              style={{ width: 25, height: 25, tintColor: "#FFFFFF" }}
             />
           ),
         }}
