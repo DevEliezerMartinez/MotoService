@@ -18,12 +18,6 @@ export default function TabOneScreen() {
 
        <Center>{trip === 0 ? <FirstTrip /> : <WatchTrips />}</Center>
 
-      {/* <Link
-        style={{ color: "white", backgroundColor: "blue" }}
-        href="/trips/settings"
-      >
-        Ir sig paginaaaa
-      </Link> */}
     </View>
   );
 }

@@ -48,24 +48,7 @@ export default function TabLayout() {
         },
       }}
     >
-      {/* <Tabs.Screen
-        name="Trips"
-        
-        options={{
-          title: "Mis viajese",
-          headerShown: true,
-          tabBarLabelStyle: {
-            fontFamily: "MontserratSemibold", // Usa el nombre definido en Font.loadAsync
-            fontSize: 13,
-          },
-          tabBarIcon: () => (
-            <Image
-              source={require("../../assets/images/road-64.png")}
-              style={{ width: 25, height: 25, tintColor: "#FFFFFF" }}
-            />
-          ),
-        }}
-      /> */}
+
       <Tabs.Screen
         name="Garage"
         options={{

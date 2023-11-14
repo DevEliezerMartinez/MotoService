@@ -1,4 +1,6 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { Redirect } from "expo-router"
+
 import {
   DarkTheme,
   DefaultTheme,
@@ -48,6 +50,7 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
+      
     }
   }, [loaded]);
 
@@ -55,17 +58,21 @@ export default function RootLayout() {
     return null;
   }
 
+  Redirect 
+
   return <RootLayoutNav />;
 }
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
+
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <GluestackUIProvider config={config}>
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+         
         </Stack>
       </GluestackUIProvider>
     </ThemeProvider>
