@@ -10,7 +10,9 @@ import {
 } from "@gluestack-ui/themed";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
-export default function SheduleService() {
+export default function SheduleService({ onSubmit, onClose } ) {
+
+
   // states for datepicker
   const [date, setDate] = useState(new Date());
   const [showButtonDate, setButtonDate] = useState(true);
@@ -45,10 +47,14 @@ export default function SheduleService() {
   const [detalles, setDetalles] = useState("");
 
   const handleSubmit = () => {
-    console.log("Envio de formulario:",detalles,"&",date)
+    console.log("Envio de formulario:", detalles, "&", date);
+    onSubmit()
+    onClose()
+   
   };
   return (
     <Center>
+      
       <Box
         id="fecha"
         sx={{
@@ -93,7 +99,7 @@ export default function SheduleService() {
 
       <Textarea size="md" w="$64">
         <TextareaInput
-        sx={{color: "white"}}
+          sx={{ color: "white" }}
           onChangeText={(text) => setDetalles(text)}
           role="document"
           placeholder="Añade mas detalles para recordar..."

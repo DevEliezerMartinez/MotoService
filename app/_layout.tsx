@@ -13,7 +13,6 @@ import { useEffect } from "react";
 import { useColorScheme } from "react-native";
 import { GluestackUIProvider, Text, Box } from "@gluestack-ui/themed";
 import { config } from "@gluestack-ui/config"; // Optional if you want to use default theme
-
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,

@@ -15,17 +15,33 @@ import Header from "../../../components/Services/Header";
 import BoxService from "../../../components/Services/BoxService";
 import { useState } from "react";
 import Modal from "../../../components/Services/FormularioModal";
-
+import { useSelector } from 'react-redux';
+import { useDispatch } from "react-redux";
+import { update } from "../../../src/sliceServices"; // Ajusta la ruta a tu archivo miSlice
 
 
 export default function TabTwoScreen() {
   const [Vacio, setSetVacio] = useState(true);
   const [openModal, setOpenModal] = useState(false);
 
+  const counterValue = useSelector((state) => state.listServices.counter);
 
+  /* console.log("🚀 ~ TabTwoScreen ~ counterValue->", counterValue)
+
+  const dispatch = useDispatch();
+  
+
+  const handleSubmit = () => {
+   
+     dispatch(update());
+
+   
+  };
+ */
+
+  
   const handleOpenModal = () => {
     setOpenModal(true);
-    console.log("OPEN modal");
   };
 
   const handleCloseModal = () => {
@@ -57,48 +73,14 @@ export default function TabTwoScreen() {
       descripcion: "frenos, balancines 4",
       fecha: "2023-15-04",
     },
-    {
-      id: 5,
-      status: "Proximo",
-      descripcion: "Cambio de aceite, bujias 5",
-      fecha: "2023-15-05",
-    },
-    {
-      id: 6,
-      status: "Hecho",
-      descripcion: "frenos, balancines 6",
-      fecha: "2023-15-06",
-    },
-    {
-      id: 7,
-      status: "Proximo",
-      descripcion: "Cambio de aceite, bujias 7",
-      fecha: "2023-15-07",
-    },
-    {
-      id: 8,
-      status: "Hecho",
-      descripcion: "frenos, balancines 8",
-      fecha: "2023-15-08",
-    },
-    {
-      id: 9,
-      status: "Proximo",
-      descripcion: "Cambio de aceite, bujias 9",
-      fecha: "2023-15-09",
-    },
-    {
-      id: 10,
-      status: "Hecho",
-      descripcion: "frenos, balancines 10",
-      fecha: "2023-15-10",
-    },
+  
+  
   ];
 
- 
   return (
     <View style={commonStyles.container}>
       <Header />
+
 
       <View style={commonStyles.miniContainer}>
         <Center>
@@ -141,19 +123,8 @@ export default function TabTwoScreen() {
         >
           Historial de servicioos
         </Text>
-        {Vacio ? <ContainerVacio /> : <ContainerScroll data={data} />}
-
-        {/*   <ScrollView
-          sx={{
-            height: "$56",
-            marginBottom: 20,
-            gap:10
-          }}
-        >
-          {data.map((item) => (
-            <BoxService key={item.id} data={item} />
-          ))}
-        </ScrollView> */}
+        
+        {!counterValue ? <ContainerVacio /> : <ContainerScroll data={data} />}
 
         <Modal status={openModal} onClose={handleCloseModal} />
 
@@ -184,7 +155,7 @@ export default function TabTwoScreen() {
 }
 
 const ContainerScroll = ({ data }) => (
-  <ScrollView sx={commonStyles.scrollView}>
+  <ScrollView sx={{marginTop: 10, height: 310}}>
     {data.map((item) => (
       <BoxService key={item.id} data={item} />
     ))}

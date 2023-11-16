@@ -19,7 +19,7 @@ import {
 } from "@gluestack-ui/themed";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
-export default function RegisterService() {
+export default function RegisterService({ onSubmit, onClose }) {
   // states for datepicker
   const [date, setDate] = useState(new Date());
   const [showButtonDate, setButtonDate] = useState(true);
@@ -61,6 +61,11 @@ export default function RegisterService() {
     console.log("Envio de formulario Costo:", Costo);
     console.log("Envio de formulario date:", date);
     console.log("Envio de formulario array:", values);
+
+
+    
+    onSubmit()
+    onClose()
   };
 
   return (
@@ -134,8 +139,8 @@ export default function RegisterService() {
               setValues(keys);
             }}
           >
-            <Checkbox value="Aceite">
-              <CheckboxIndicator
+            <Checkbox value="Aceite" aria-label="Seleccionar aceite">
+              <CheckboxIndicator aria-label="aria"
                 sx={{
                   width: 100,
                   height: 35,
@@ -146,7 +151,7 @@ export default function RegisterService() {
                   alignItems: "center",
                 }}
               >
-                <CheckboxLabel>
+                <CheckboxLabel aria-label="aria">
                   <Text
                     style={{
                       fontFamily: "MontserratSemibold",
@@ -161,8 +166,8 @@ export default function RegisterService() {
               </CheckboxIndicator>
             </Checkbox>
 
-            <Checkbox value="Bujias">
-              <CheckboxIndicator
+            <Checkbox value="Bujias"  aria-label="Seleccionar Bujias">
+              <CheckboxIndicator aria-label="aria"
                 sx={{
                   width: 100,
                   height: 35,
@@ -173,7 +178,7 @@ export default function RegisterService() {
                   alignItems: "center",
                 }}
               >
-                <CheckboxLabel>
+                <CheckboxLabel aria-label="aria">
                   <Text
                     style={{
                       fontFamily: "MontserratSemibold",
@@ -188,8 +193,8 @@ export default function RegisterService() {
               </CheckboxIndicator>
             </Checkbox>
 
-            <Checkbox value="Revisión de cadena">
-              <CheckboxIndicator
+            <Checkbox value="Revisión de cadena"  aria-label="Seleccionar cadena">
+              <CheckboxIndicator aria-label="aria"
                 sx={{
                   width: 100,
                   height: 35,
@@ -200,7 +205,7 @@ export default function RegisterService() {
                   alignItems: "center",
                 }}
               >
-                <CheckboxLabel>
+                <CheckboxLabel aria-label="aria">
                   <Text
                     style={{
                       fontFamily: "MontserratSemibold",
@@ -215,8 +220,8 @@ export default function RegisterService() {
               </CheckboxIndicator>
             </Checkbox>
 
-            <Checkbox value="Anticogelante">
-              <CheckboxIndicator
+            <Checkbox value="Anticogelante"  aria-label="Seleccionar Anticogelante">
+              <CheckboxIndicator aria-label="aria"
                 sx={{
                   width: 100,
                   height: 35,
@@ -227,7 +232,7 @@ export default function RegisterService() {
                   alignItems: "center",
                 }}
               >
-                <CheckboxLabel>
+                <CheckboxLabel aria-label="aria">
                   <Text
                     style={{
                       fontFamily: "MontserratSemibold",
@@ -242,8 +247,8 @@ export default function RegisterService() {
               </CheckboxIndicator>
             </Checkbox>
 
-            <Checkbox value="Filtro de Aire">
-              <CheckboxIndicator
+            <Checkbox value="Filtro de Aire"  aria-label="Seleccionar Aire">
+              <CheckboxIndicator aria-label="aria"
                 sx={{
                   width: 100,
                   height: 35,
@@ -254,7 +259,7 @@ export default function RegisterService() {
                   alignItems: "center",
                 }}
               >
-                <CheckboxLabel>
+                <CheckboxLabel aria-label="aria">
                   <Text
                     style={{
                       fontFamily: "MontserratSemibold",
@@ -299,8 +304,8 @@ export default function RegisterService() {
               setValues(keys);
             }}
           >
-            <Checkbox value="Luces">
-              <CheckboxIndicator
+            <Checkbox value="Luces" aria-label="Seleccionar luces">
+              <CheckboxIndicator aria-label="aria"
                 sx={{
                   width: 100,
                   height: 35,
@@ -311,7 +316,7 @@ export default function RegisterService() {
                   alignItems: "center",
                 }}
               >
-                <CheckboxLabel>
+                <CheckboxLabel aria-label="aria">
                   <Text
                     style={{
                       fontFamily: "MontserratSemibold",
@@ -326,8 +331,8 @@ export default function RegisterService() {
               </CheckboxIndicator>
             </Checkbox>
 
-            <Checkbox value="Frenos">
-              <CheckboxIndicator
+            <Checkbox value="Frenos" aria-label="Seleccionar frenos">
+              <CheckboxIndicator aria-label="aria"
                 sx={{
                   width: 100,
                   height: 35,
@@ -338,7 +343,7 @@ export default function RegisterService() {
                   alignItems: "center",
                 }}
               >
-                <CheckboxLabel>
+                <CheckboxLabel aria-label="aria">
                   <Text
                     style={{
                       fontFamily: "MontserratSemibold",
@@ -353,8 +358,8 @@ export default function RegisterService() {
               </CheckboxIndicator>
             </Checkbox>
 
-            <Checkbox value="Revisión de bateria">
-              <CheckboxIndicator
+            <Checkbox value="Revisión de bateria" aria-label="Seleccionar bateria">
+              <CheckboxIndicator aria-label="aria"
                 sx={{
                   width: 100,
                   height: 35,
@@ -365,7 +370,7 @@ export default function RegisterService() {
                   alignItems: "center",
                 }}
               >
-                <CheckboxLabel>
+                <CheckboxLabel aria-label="aria">
                   <Text
                     style={{
                       fontFamily: "MontserratSemibold",
@@ -380,8 +385,8 @@ export default function RegisterService() {
               </CheckboxIndicator>
             </Checkbox>
 
-            <Checkbox value="Llantas">
-              <CheckboxIndicator
+            <Checkbox value="Llantas" aria-label="Seleccionar llantas">
+              <CheckboxIndicator aria-label="aria"
                 sx={{
                   width: 100,
                   height: 35,
@@ -392,7 +397,7 @@ export default function RegisterService() {
                   alignItems: "center",
                 }}
               >
-                <CheckboxLabel>
+                <CheckboxLabel aria-label="aria">
                   <Text
                     style={{
                       fontFamily: "MontserratSemibold",
@@ -407,8 +412,8 @@ export default function RegisterService() {
               </CheckboxIndicator>
             </Checkbox>
 
-            <Checkbox value="Claxon">
-              <CheckboxIndicator
+            <Checkbox value="Claxon" aria-label="Seleccionar claxon">
+              <CheckboxIndicator aria-label="aria"
                 sx={{
                   width: 100,
                   height: 35,
@@ -419,7 +424,7 @@ export default function RegisterService() {
                   alignItems: "center",
                 }}
               >
-                <CheckboxLabel>
+                <CheckboxLabel aria-label="aria">
                   <Text
                     style={{
                       fontFamily: "MontserratSemibold",
