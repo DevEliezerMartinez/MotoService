@@ -219,6 +219,7 @@ export default function firstTrip() {
                   <InputField
                     onChangeText={(text) => setKm(text)}
                     placeholder="Km del viaje"
+                    keyboardType="numeric"
                     sx={{ color: "$white" }}
                   />
                 </Input>

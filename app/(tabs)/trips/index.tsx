@@ -31,7 +31,6 @@ export default function TabOneScreen() {
         <Center sx={{ height: 580, width: 370 }}>
           {miDato === 0 ? <FirstTrip /> : <WatchTrips />}
 
-          {/*  <Center sx={{  width: "$full", padding:1, borderWidth:1, borderColor:"red", }}>{trip === 0 ? <FirstTrip /> : <WatchTrips />}</Center> */}
         </Center>
       </View>
    

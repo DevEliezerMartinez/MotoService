@@ -33,6 +33,8 @@ export default function RootLayout() {
     MontserratBold: require("../assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf"),
     MontserratSemibold: require("../assets/fonts/Montserrat/static/Montserrat-SemiBold.ttf"),
     MontserratItalic: require("../assets/fonts/Montserrat/static/Montserrat-Italic.ttf"),
+    MontserratRegular: require("../assets/fonts/Montserrat/static/Montserrat-Regular.ttf"),
+
     PoppinsRegular: require("../assets/fonts/Poppins/Poppins-Regular.ttf"),
     PoppinsItalic: require("../assets/fonts/Poppins/Poppins-Italic.ttf"),
     PoppinsBold: require("../assets/fonts/Poppins/Poppins-Bold.ttf"),

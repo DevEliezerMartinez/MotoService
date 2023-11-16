@@ -314,6 +314,7 @@ const WatchTrips = () => {
                       setKm(numericValue);
                     }}
                     placeholder="Km del viaje"
+                    keyboardType="numeric"
                     sx={{ color: "$white" }}
                   />
                 </Input>
