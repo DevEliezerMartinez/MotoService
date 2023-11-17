@@ -15,7 +15,7 @@ import { Pressable } from "react-native";
 
 const ComponentCard = ({ data }) => {
   const [showModal, setShowModal] = useState(false);
-  console.log(showModal);
+ /*  console.log(showModal); */
 
   const PressIn = () => {
     setShowModal(true);

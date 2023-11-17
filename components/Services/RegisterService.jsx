@@ -40,7 +40,6 @@ export default function RegisterService({ onSubmit, onClose }) {
     let adi = currentDate;
     adi = JSON.stringify(adi);
     adi = adi.slice(1, 11);
-    console.log(adi);
 
     setShow(false);
     setDate(adi);

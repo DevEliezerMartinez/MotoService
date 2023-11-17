@@ -33,7 +33,6 @@ export default function SheduleService({ onSubmit, onClose } ) {
     let adi = currentDate;
     adi = JSON.stringify(adi);
     adi = adi.slice(1, 11);
-    console.log(adi);
 
     setShow(false);
     setDate(adi);
@@ -47,7 +46,8 @@ export default function SheduleService({ onSubmit, onClose } ) {
   const [detalles, setDetalles] = useState("");
 
   const handleSubmit = () => {
-    console.log("Envio de formulario:", detalles, "&", date);
+    const status = "Agendar"
+    console.log("status:" ,status," fecha", date, " detalles ", detalles);
     onSubmit()
     onClose()
    

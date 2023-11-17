@@ -26,18 +26,7 @@ export default function TabTwoScreen() {
 
   const counterValue = useSelector((state) => state.listServices.counter);
 
-  /* console.log("🚀 ~ TabTwoScreen ~ counterValue->", counterValue)
 
-  const dispatch = useDispatch();
-  
-
-  const handleSubmit = () => {
-   
-     dispatch(update());
-
-   
-  };
- */
 
   
   const handleOpenModal = () => {
@@ -155,7 +144,7 @@ export default function TabTwoScreen() {
 }
 
 const ContainerScroll = ({ data }) => (
-  <ScrollView sx={{marginTop: 10, height: 310}}>
+  <ScrollView sx={{marginTop: 10, height: 230}}>
     {data.map((item) => (
       <BoxService key={item.id} data={item} />
     ))}
@@ -169,6 +158,10 @@ const ContainerVacio = () => (
     </Text>
   </View>
 );
+
+
+
+
 const commonStyles = StyleSheet.create({
   // Estilos de fuente numerados
   container: {
